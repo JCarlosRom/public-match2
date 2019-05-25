@@ -1,0 +1,22 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/helpers';
+@import 'utils/overwrite';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/footer';
+@import 'layout/application';
+@import 'layout/header';
+@import 'components/*';
+@import 'landing_page';
+@import 'pages/activities';
+@import 'judge/activities';
+@import 'admin/admin';
+@import 'pages/top_teams';
+@import 'pages/polls';
+@import 'session';

@@ -1,0 +1,32 @@
+.main-content {
+  &.small {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  &.medium {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  &.big {
+    margin: 0 auto;
+    max-width: 800px;
+   
+  }
+}
+
+.information-content {
+  a {
+    margin-bottom: $regular-margin;
+  }
+}
+
+.password-field {
+  margin-bottom: 0px;
+}
+.michelada-icon {
+  display: block;
+  height: 120px;
+  margin: auto;
+  margin-bottom: calc(#{$regular-margin} * 3);
+  margin-top: $regular-margin;
+}

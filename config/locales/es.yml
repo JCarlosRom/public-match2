@@ -1,0 +1,354 @@
+# Files in the config/locales directory are used for internationalization
+
+es:
+  actions:
+    confirm: "¿Estás seguro?"
+    remove_vote: "¿Quieres eliminar tu voto?"
+  activities:
+    add: "Agregar actividad"
+    all: "Todas las actividades"
+    approved_by: 'Aprobada por: %{users}'
+    best: "Mejores"
+    closed: "El tiempo para subir actividades ha terminado"
+    edit_activity: "Editar actividad"
+    label: "ACTIVIDADES"
+    my_activities: "Mis actividades"
+    name: "Nombre"
+    pending: "Actividades por revisar"
+    points: "Puntaje"
+    status: "Estado"
+    status_approve: "Aprobar"
+    status_approved: "Aprobada"
+    status_unapprove: "Desaprobar"
+    title: "Actividades"
+    type: "Tipo"
+    messages:
+      approved: "Actividad aprobada"
+      error_accessing: "No puedes acceder a esta actividad"
+      error_creating: "Error creando la actividad"
+      error_approving: "Error aprobando la actividad"
+      error_deleting: "Error eliminando la actividad"
+      error_unapproving: "Error desaprobando la actividad"
+      error_update: "Error actualizando la actividad"
+      error_updating_fedeback: "Error editando el comentario"
+      error_deleting_feedback: "Error eliminando el comentario"
+      error_upload: "Error cargando la actividad"
+      deleted: "Actividad eliminada"
+      feedback_updated: "Comentario editado"
+      feedback_deleted: "Comentario eliminado"
+      no_permitted: "Operación no permitida"
+      unapproved: "Actividad desaprobada"
+      updated: "Actividad actualizada"
+      uploaded: "Actividad cargada"
+  alerts:
+    activities:
+      other_blank: "Este campo no puede estar en blanco"
+      not_black: "Los campos no pueden estar en blanco"
+    status_approve: "Aprobada"
+    status_unapprove: "Desaprobada"
+  api:
+    errors:
+      no_activities: "No hay actividades"
+      no_content_match: "No hay actividades en este match"
+      no_teams_created: "No hay equipos creados"
+    team: "Equipo %{team}, %{activity_type}"
+    score: "%{score} puntos"
+    winner: "Ganador: %{team}"
+  buttons:
+    actions: "Acciones"
+    add: "Agregar"
+    add_other: "Agregar otro"
+    create: "Crear"
+    delete: "Eliminar"
+    edit: "Editar"
+    invite: "Invitar"
+    new: "Nuevo"
+    markdown:
+      bold: "Negritas"
+      code: "Código"
+      code_block: "Bloque"
+      italic: "Cursiva"
+      link: "Enlace"
+      list: "Lista"
+      quote: "Cita"
+    show: "Ver"
+    submit: "Enviar"
+    upload: "Cargar"
+    update: "Actualizar"
+  comments:
+    all: "Comentarios"
+    create: "Comentar"
+    created: "Comentario realizado"
+    error_creating: "Error guardando comentario"
+  errors:
+    end_date_invalid: "La fecha de inicio no puede ser posterior a la fecha de término"
+    format: "%{message}"
+    no_content_match: "El match actual no es de tipo 'Content', por lo cual no se pueden subir actividades"
+    no_project_match: "El match actual no es de tipo 'Project', por lo cual no se pueden subir projectos"
+    overlapped_dates: "Hay un match activo en ese rango de fechas: id: %{match_id} fechas: %{start_date} - %{end_date}"
+  home: "Inicio"
+  labels:
+    activities_range: "Aplicaciones que pueden participar"
+    activities: "Actividades del"
+    all: "Todas"
+    archives: 'Archivos:'
+    approved: "Aprobado"
+    admin: 'Lista de usuarios'
+    abstract: "Abstract"
+    tentative_score: "Aspira a %{score} pts"
+    audience: "Audiencia"
+    comments: "Comentarios"
+    create_team: "Crea tu propia"
+    description: "Descripción"
+    dinasty: 'Dinastía'
+    download: "Descargar archivo"
+    end_date: "Fecha de término"
+    english: "Inglés"
+    english_approved: "Inglés aprobado"
+    english_unapproved: "Inglés desaprobado"
+    email_uno: "Compañero de crimen"
+    evaluate: "Evaluar"
+    events: "Eventos:"
+    extra_points: "Puntos extra"
+    features: "Features"
+    fight: "PELEA"
+    information: "Sólo .zip, .jpg, .jpeg, .png, .key o .pdf"
+    invite_users: "Invita a tus compañeros"
+    invite: 'Agregar integrante'
+    last_day: 'Recuerda ejercer tu derecho a votar, tienes hasta: '
+    leader: "Líder"
+    link: "Enlace"
+    location: "Evento"
+    location_approved: "Evento aprobado"
+    location_unapproved: "Evento desaprobado"
+    look_who_is: "Mira quién está en la "
+    not_location: "No hay evento registrado"
+    name: "Título"
+    match: "Match"
+    match_type: "Tipo de match"
+    michelada_score: "Puntaje michelada"
+    notes: "Notas"
+    other_location: "Otra:"
+    outline: "Outline"
+    pitch: "Pitch"
+    points: "%{score} pts"
+    polls: "Votaciones"
+    post: "Post"
+    project: "Proyecto del"
+    projects: "Proyectos"
+    repositories: "Repositorios"
+    reviewing: "En revisión"
+    role: "Rol"
+    score: "Puntaje:"
+    selected_file: "Archivo seleccionado"
+    select_location: 'Escoje una opción'
+    sign_out: 'Cerrar sesión'
+    start_date: "Fecha de inicio"
+    type: "Tipo:"
+    team: "Equipo"
+    tentative_score: "Aspira a %{score} pts"
+    unapproved: "Desaprobado"
+    version: "Versión"
+    vote: 'Tu voto es libre y secreto'
+    waiting: "En espera"
+    welcome: '¡Bienvenido'
+    welcome-admin: 'Bienvenido admin'
+  match:
+    edit: 'Editar Match'
+    create: "Match creado"
+    create_new: "Nuevo match"
+    delete: "Match eliminado"
+    error_creating: "Error creando el match"
+    error_deleting: "Error eliminando el match"
+    error_type: "El match actual no acepta esta acción"
+    error_updating: "Error actualizando el match"
+    update: "Match actualizado"
+  team:
+    create: "Crear un equipo"
+    destroy: "Eliminar equipo"
+    edit: "Editar equipo"
+    error_limit_members: "El equipo ya está completo"
+    error_accessing: "No puedes acceder a otro team"
+    invalid_user: 'El usuario ya cuenta con un equipo, o el correo es invalido'
+    top: "Top"
+    winner: "Equipo ganador"
+    messages:
+      created: "Equipo creado"
+      deleted: "Equipo eliminado"
+      email_not_valid: "Email no válido"
+      error_creating: "Error creando el equipo"
+      error_deleting: "Error eliminando al equipo"
+      error_inviting: "Error enviando invitación"
+      error_leaving: "Error abandonando el equipo"
+      error_updating: "Error actualizando el equipo"
+      error_users: "Correo(s) invalidos"
+      leave_team: "Abandonar equipo"
+      left: "Abandonaste el equipo"
+      no_teams: 'No hay equipos'
+      no_leader: 'No hay equipo líder'
+      updated: "Equipo actualizado"
+      user_invited: "El usuario ha sido agregado a tu equipo"
+  placeholders:
+    activity_name: "Nombre de la actividad"
+    comment: "Escribe el comentario"
+    link: "https://www.example.com\nhttp://www.example2.com"
+    team_name: "Nombre del equipo"
+    user_email: "Ingresa el correo del usuario"
+    activity:
+      title: "Algo inspirador..."
+      description: "¿Sobre qué trata?"
+      audience: "¿Cómo dirigirse al  público?"
+      guide: "¿Qué temas se abordan?"
+      event: "¿En qué lugar se impartió?"
+    project:
+      repositories: "¿Dónde está tu proyecto?"
+      features: "¿Qué hace?"
+  poll:
+    best_activity: "Lo mejor de lo mejor"
+    create_new: "Nueva votación"
+    created: "Votación creada"
+    deleted: "Votación eliminada"
+    edit_poll: "Editar votación"
+    empty_activities: "Aún no existen actividades por las cuales votar"
+    empty_projects: "Aún no existen proyectos por los cuales votar"
+    error_accesing: "No puedes acceder a esta votación"
+    error_actual_polls: "No puedes crear una nueva votación mientras haya alguna programada a futuro"
+    error_creating: "La votación no ha sido creada"
+    error_date_start: "Las votaciones no pueden iniciar antes de la fecha actual"
+    error_dates: "La fecha final debe ser mayor a la fecha inicial"
+    error_updating: "Error actualizado la votación"
+    title: "Votaciones"
+    updated: "Votación actualizada correctamente"
+    user_has_voted: "Solo puedes votar una sola vez"
+    vote: "Vota"
+    votes: "Votos"
+  polls:
+    deleted: "Votación eliminada"
+    updated: "Votación actualizada"
+  projects:
+    already_have_one: "No puedes crear otro proyecto"
+    created: "Proyecto creado"
+    deleted: "Proyecto eliminado"
+    description: "Descripción"
+    error_creating: "Error creando proyecto"
+    error_deleting: "Error eliminando proyecto"
+    error_updating: "Error actualizando proyecto"
+    features: "Características"
+    my_project: "Mi proyecto"
+    no_feature: "No hay características"
+    no_repository: "No hay repositorios"
+    no_project: "No hay proyecto registrado"
+    no_team: "Debes crear primero tu equipo"
+    repositories: "Repositorios"
+    updated: "Proyecto actualizado"
+    messages:
+      approved: "Proyecto aprobado"
+      error_approve: "Error aprobando proyecto"
+      error_unapproving: "Error desaprobando proyecto"
+      unapproved: "Proyecto desaprobado"
+  uploads:
+    deleted: 'Archivo eliminado'
+    error_deleting: 'Error eliminando el archivo'
+  user:
+    change_password: "Cambiar contraseña"
+    confirm_new_password: "Confirmar nueva contraseña"
+    confirmation_instructions: "¿No ha recibido las instrucciones para la verificación?"
+    destroy: "El usuario ha sido eliminado"
+    email: "E-mail"
+    error_updating_role: "Error actualizando rol"
+    error_destroy: "Error eliminando al usuario"
+    forgot_password_submit: "Restablecer contraseña"
+    forgot_password: "Olvidé mi contraseña"
+    log_in: "Iniciar sesión"
+    log_out: "Cerrar sesión"
+    log_up: "Registrarse"
+    new_invitation: "Invitar"
+    new_password: 'Nueva contraseña'
+    new-registration: '¿Eres nuevo?'
+    password_confirmation: "Confirmar contraseña"
+    password_requirement: "(Al menos 6 caracteres)"
+    password: "Contraseña"
+    recover_password: "Ingresa un correo a donde te mandaremos las intrucciones para recuperar tu contraseña"
+    already_registered: 'Ya tengo una cuenta'
+    remember_me: "Recordarme"
+    role_updated: "Rol actualizado"
+    judge:
+      activities:
+        abstract: "Resumen:"
+        description: "Descripción:"
+        intended_audence: "Audiencia dirigida:"
+        outline: "Outline:"
+        pitch: "Pitch:"
+        on_old:
+          objetive: "Objetivo"
+          remember: "Recuerda ser"
+  votes:
+    error_type: "Ya tienes un voto hacia una actividad de este tipo"
+    error_unvoting: "Error eliminando voto"
+    error_voting: "Error votando"
+    number: "Votantes"
+    unvote: "Quitar voto"
+    unvoted: "Voto eliminado"
+    vote: "Votar"
+    voted: "Voto registrado"
+    vote_range: "Votaciones del %{start_date} al %{end_date}"
+    type: "Tipo"
+  information:
+    footer:
+      copyrights: "Derechos de autor michelada.io 2019"
+      about: "Acerca de MCM"
+    landing:
+      let_the: "¡Que el"
+      best_player: "MEJOR JUGADOR"
+      win: "gane!"
+      about: "MCM es un concurso de desarrollo de contenido de 6 semanas en el que todos los michelada surgirán con excelentes publicaciones de blogs, charlas o talleres, sin un tema específico que cubrir para que todos puedan compartir sus ideas y conocimientos relacionados con tecnología"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Registro no válido"
+      models:
+        activity:
+          attributes:
+            description:
+              blank: "Debes de poner una descripción"
+            pitch_audience:
+              blank: "Debes de ingresar la información"
+            abstract_outline:
+              blank: "Debes de ingresar la información"
+            name:
+              taken: "Ya existe una actividad con ese nombre"
+              blank: "Debes de poner un nombre"
+            location:
+              blank: "Necesitas agregar una locación"
+        match:
+          attributes:
+            match_type:
+              blank: "Debes seleccionar un tipo de match"
+        project:
+          attributes:
+            name:
+              blank: "Debes agregar un nombre"
+              taken: "Ya existe un proyecto con ese nombre"
+            description:
+              blank: "Debes de agregar una descripción"
+            features:
+              blank: "Debes de agregar por lo menos un feature de tu proyecto"
+        team:
+          attributes:
+            name:
+              blank: "Debes nombrar a tu equipo"
+              taken: "El equipo ya existe"
+        user:
+          attributes:
+            password:
+              too_short: "Debes ingresar una contraseña de al menos 6 caracteres"
+              blank: "Debes ingresar una contraseña"
+            reset_password_token:
+              invalid: "Token invalido"
+            email:
+              blank: "Debes ingresar un E-mail"
+              already_has_team: "Este usuario ya pertenece a un equipo"
+              invalid: "E-mail no válido"
+              taken: "E-mail ya registrado"
+            password_confirmation:
+              confirmation: "Las contraseñas no coinciden "

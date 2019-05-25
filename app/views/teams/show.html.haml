@@ -1,0 +1,16 @@
+.container.center-vertical.activities-list
+  .main-content.medium.pb-5
+    .text-right
+      %p.right-info.mb-0
+        %strong
+          = "#{t('labels.welcome')},"
+        = "#{current_user.email.remove('@michelada.io')}!"
+      = link_to  destroy_user_session_path, method: :delete do
+        = t('labels.sign_out')
+
+    %h3.mt-5
+      %span.team=@team.name
+    - if @match.content_match?
+      = render partial: 'teams_content'
+    - elsif @match.project_match?
+      = render partial: 'teams_projects'

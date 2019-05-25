@@ -1,0 +1,22 @@
+inherit_from: .rubocop_todo.yml
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*.rb'
+    - 'db/*.rb'
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 30
+
+Documentation:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+  - 'db/migrate/*.rb'

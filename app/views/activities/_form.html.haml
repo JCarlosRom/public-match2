@@ -1,0 +1,49 @@
+.container.center-vertical.activities
+  .main-content.medium.mt-5
+    = simple_form_for([@match, @activity]) do |f|
+
+      %label
+        = t('labels.type')
+      = f.select :activity_type, Activity.activity_types.keys, include_blank: false
+      .mt-2
+      = f.input :name, label: t("labels.name"), placeholder: t("placeholders.activity.title"), input_html: { class: 'input-text' }
+      .optional-fields
+        #description
+          = f.input :description, label: t("labels.description"), placeholder: t("placeholders.activity.description"), input_html: { class: 'input-text optional-fields' }, required: true
+        #pitch-audience
+          = f.input :pitch_audience, label: t("labels.audience"), placeholder: t("placeholders.activity.audience"), input_html: { class: 'input-text optional-fields' }
+        #abstract-outline
+          = f.input :abstract_outline, label: t("labels.outline"), placeholder: t("placeholders.activity.guide"), input_html: { class: 'input-text optional-fields' }
+
+      .row
+        .col-sm-12.col-xs-12.mb-3
+          %label=t("labels.location")
+          #other_location
+            %input{type: 'text', placeholder: t("placeholders.activity.event"), class: 'input-text add-location mt-2', id: 'add_location_input'}
+
+          #location_inputs
+            = f.simple_fields_for :locations do |l|
+              = l.input :name, as: :hidden, class: 'locations_attribute'
+
+      .locations_list.tags_box
+        %ul
+          - @activity.locations.each_with_index do |location, index|
+            - unless location.name.nil?
+              %li{id: index}<
+                =location.name
+                %a>='x'
+
+      = f.input :notes, label: t("labels.link"), placeholder: t("placeholders.link"), input_html: { class: 'input-text' }
+      = f.input :english, label: t("labels.english"), input_html: {class: 'mt-0'} , label_html: { class: 'mt-0'}
+
+      - if @activity.files.attached? && @activity.valid?
+        = t('labels.archives')
+        .mt-3
+          - @activity.files.each do |file|
+            %p.mt-3.mb-0
+              = "#{t("labels.selected_file")}: #{file.filename}"
+            = link_to t('buttons.delete'), activity_upload_path(@activity.id, file.id), method: :delete, data: { confirm: t('actions.confirm')}
+      = f.file_field :files, multiple: true,  class:'inputfile', :accept => '.pdf,.jpg,.png,.key,.jpeg,.zip'
+      %em= t('labels.information')
+
+      %input{type: "submit", id:"submit_button", value: t("buttons.submit"), class: 'button'}

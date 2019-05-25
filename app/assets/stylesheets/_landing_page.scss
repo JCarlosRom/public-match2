@@ -1,0 +1,35 @@
+.landing{
+  .michelada-icon {
+    display: block;
+    height: 120px;
+    margin: auto;
+    margin-bottom: calc(#{$regular-margin} * 3);
+    margin-top: $regular-margin;
+  }
+  .container-information {
+    text-align: center;
+    h3 {
+      display: inline;
+      font-size: $primary-font-size;
+      text-transform: uppercase;
+    }
+    .color2 {
+      color: $red;
+      font-size: 24px;
+    }
+    .magic span{
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: $third-font-size;
+    }
+    .magic span:first-letter {
+      color: $red;
+      font-size: 160%;
+      font-weight: 500;
+    }
+    p {
+      margin-top: $regular-margin;
+    }
+  }
+}

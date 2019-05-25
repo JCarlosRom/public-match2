@@ -1,0 +1,179 @@
+.activities {
+
+  .button {
+    margin-bottom: $regular-margin;
+  }
+
+  select {
+    padding: 10px $regular-padding;
+  }
+
+  .form-check {
+    align-items: center;
+    display: flex;
+  }
+
+  .label-mobile {
+    @include breakpoint (mobile) {
+      margin-top: $regular-margin;
+    }
+  }
+  .comment {
+    position: relative;
+    .judge, .regular {
+      position: relative;
+      padding-left: 70px;
+      text-transform: uppercase;
+      &:before {
+        position: absolute;
+        width: 60px;
+        height: 20px;
+        content: "JUDGE";
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 10px;
+        background: $yellow;
+        color: $blue;
+        line-height: 20px;
+        font-weight: bold;
+      }
+    }
+    .regular {
+      &:before {
+        background: $orange;
+        content: "PLAYER"
+      }
+    }
+    .comment-content {
+      margin: 15px 0;
+      border-left: 3px solid #292C52;
+      padding: 2px 0 2px 25px;
+      margin-left: 15px;
+      width: calc(100% - 15px);
+      img {
+        margin-top: 10px;
+        width: 95%;
+      }
+    }
+    .edit_comment {
+      opacity: 0;
+      transition: 0.5s;
+    }
+    &:hover {
+      .edit_comment {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+    blockquote {
+      border-left: 10px solid $light-blue;
+      font-style: italic;
+      margin: 5px 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+    }
+    blockquote p {
+      display: inline;
+    }
+  }
+}
+
+.activities-list {
+  .right-info {
+    text-align: end;
+    font-size: $third-font-size;
+    text-transform: uppercase;
+    strong {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+  }
+
+  .section {
+    border-color: $light-blue;
+  }
+
+  .team {
+    font-size: 20px;
+  }
+
+  .center-info {
+    text-align: center;
+  }
+
+  .icon-detail {
+    fill: $yellow;
+    height: $primary-icon-size;
+    transform: rotate(-90deg);
+  }
+
+  .points {
+    color: $red;
+  }
+
+  .activities-table {
+    width: 100%;
+    thead {
+      color: $white;
+      font-size: $third-font-size;
+      th {
+        font-weight: 500;
+        padding-bottom: $regular-padding;
+      }
+    }
+    .activity-actions {
+      a {
+        img {
+          height: $secondary-icon-size;
+        }
+      }
+    }
+  }
+}
+.icon-detail {
+  fill: $yellow;
+  height: $primary-icon-size;
+  transform: rotate(-90deg);
+}
+.points{
+  color: $red
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+li {
+  background: $blue;
+  border-radius: 15px;
+  font-size: $secondary-font-size;
+  margin: 0 5px 5px 0;
+  padding: 3px $regular-padding;
+  a {
+    cursor: pointer;
+    margin-left: $regular-margin;
+  }
+}
+img.approve-true{
+  background-color: $green;
+  padding: 3px;
+}
+img.approve-false{
+  margin-left: 0;
+  background-color: $light-blue;
+}
+img.check-activity {
+  height: $secondary-icon-size;
+  border-radius: 50%;
+  margin: 5px;
+}

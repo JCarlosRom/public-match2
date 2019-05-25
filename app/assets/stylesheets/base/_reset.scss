@@ -1,0 +1,125 @@
+body {
+  color: $white;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 18px;
+  min-height: 100vh;
+}
+h2 {
+  color: $white;
+}
+
+h1 {
+  color: $red;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $white;
+  font-size: 25px;
+  font-weight: 400;
+  span {
+    color: $red;
+    text-transform: uppercase;
+    font-size: $highlight-font-size;
+  }
+  @include breakpoint(mobile) {
+    font-size: 20px;
+    margin-top: $regular-margin;
+    span {
+      font-size: 24px;
+    }
+  }
+}
+.long-line {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 350px;
+    white-space: nowrap;
+  @include  breakpoint(mobile) {
+    width: 70px;
+  }
+}
+.long-line2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 350px;
+    white-space: nowrap;
+  @include  breakpoint(mobile) {
+    width: 200px;
+  }
+}
+h5 {
+  color: $white;
+}
+
+em {
+  color: $white;
+  font-size: $secondary-font-size
+}
+
+p, ol, ul, td {
+  color: $white;
+  font-size: $primary-font-size;
+  line-height: 18px;
+  span {
+    color: $yellow;
+  }
+}
+.gray{
+  color: $gray;
+}
+.section{
+  border-color: $light-blue;
+}
+hr {
+  width: 100%;
+  border: 0.5px solid $white;
+}
+
+.on-hold {
+  color: $orange;
+}
+
+.review {
+  color: $strong-red;
+}
+
+.approved {
+  color: $green;
+}
+
+pre {
+  background-color: $blue;
+  font-size: $primary-font-size;
+  padding: 10px;
+}
+
+a {
+  color: $yellow;
+  font-size: $primary-font-size;
+  &:visited {
+    color: $yellow;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+label {
+  color: $white;
+  font-size: $primary-font-size;
+}

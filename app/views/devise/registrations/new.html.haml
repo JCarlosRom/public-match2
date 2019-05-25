@@ -1,0 +1,20 @@
+.center-content-vertical
+  .main-content.container.medium.mt-5
+    .image-content
+      = link_to (image_tag 'mcm-logo', alt: 'mcm-logo', width: '250', class: 'michelada-icon'), root_path
+    .information-content
+      = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, label: t('user.email'),  autofocus: true, autocomplete: "email", class: 'input-text'
+        .field
+          = f.password_field :password, label: t('user.password'), class: 'input-text password_field'
+          - if @minimum_password_length
+            %em
+              = t("user.password_requirement")
+        .field
+          = f.password_field :password_confirmation, label: t('user.password_confirmation'), autocomplete: "new-password", class: 'input-text'
+        .actions
+          = f.submit t("user.log_up"), class:'button'
+      %p
+        = t('user.registrado')
+        = link_to t("user.log_in"), new_user_session_path

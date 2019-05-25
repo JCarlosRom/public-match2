@@ -1,0 +1,58 @@
+.main-content.container.medium.mt-5
+  .contain.center-vertical
+    .judge
+      - if current_user.judge?
+        %h3
+          = t('user.judge.activities.on_old.remember')
+          %span.text.red
+            = t('user.judge.activities.on_old.objetive')
+      - if @activity.status_by_user(current_user).nil?
+        = link_to image_tag('ic-not-approved', class: 'check-activity approve-false', id: 'approve'),  match_judge_activity_content_approvations_path(@match, @activity), method: :post
+        %label= "#{t('activities.status_approve')}"
+      - else
+        = link_to image_tag('ic-checked', class: 'check-activity approve-true', id: 'disapprove'), match_judge_activity_content_approvation_path(@match, @activity, @activity.status_by_user(current_user)), method: :delete, data: {confirm: t('actions.confirm')}
+        %label= "#{t('activities.status_approved')}"
+
+      %h3= @activity.name
+      %h6.mt-4
+        = @activity.activity_type
+        %em.points=t('labels.points', { score: @activity.score })
+      - if @activity.approvations.exists?
+        %p
+          = t('activities.approved_by', users: judges_appproves(@activity))
+      -unless @activity.activity_type == 'Post'
+        %h6.text.red.mt-4=t('user.judge.activities.description') if @activity.description
+        %p= markdown(@activity.description)
+        -if @activity.activity_type == 'Curso'
+          %h6.text.red= t('user.judge.activities.intended_audence') if @activity.pitch_audience
+          %p= markdown(@activity.pitch_audience)
+          %h6.text.red= t('user.judge.activities.outline') if @activity.abstract_outline
+          %p= markdown(@activity.abstract_outline)
+        -else
+          %h6.text.red= t('user.judge.activities.pitch') if @activity.pitch_audience
+          %p= markdown(@activity.pitch_audience)
+          %h6.text.red= t('user.judge.activities.abstract') if @activity.abstract_outline
+          %p= markdown(@activity.abstract_outline)
+
+      - unless @activity.notes&.empty?
+        %h6.text.red= t("labels.link")
+        %p= sanitize_links(@activity.notes)
+      - if current_user.judge?
+        = render 'judges_english_locations'
+      - else
+        = render 'english_locations'
+    .activities
+      - if @activity.files.attached?
+        %h6.text.red= t('labels.archives')
+        - @activity.files.each do |file|
+          %label= file.filename
+          = link_to t('labels.download'), file, disposition: "attachment", class:'button', target: :_blank
+      %hr.mt-5
+
+      %h5.mt-5.mb-5
+        = t("comments.all")
+      = render 'comments'
+
+      .mt-4
+        - if user_can_comment?(@activity)
+          = render 'comment_form'

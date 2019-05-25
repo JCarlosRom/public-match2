@@ -1,0 +1,42 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+
+  .nav {
+    justify-content: flex-end;
+    text-align: right;
+    > * {
+      margin-left: $regular-margin;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $white;
+    &.is_active {
+      fill: $yellow;
+      &.stroke {
+        stroke: $yellow;
+        * {
+          stroke: $yellow;
+        }
+      }
+      * {
+        fill: $yellow;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .company-logo {
+      height: 35px;
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+}

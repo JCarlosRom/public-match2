@@ -1,0 +1,17 @@
+.container.center-content-vertical
+  .main-content.medium.mt-5
+    .landing.mt-5
+      = image_tag 'mcm-logo', alt: 'mcm-logo', class: 'michelada-icon'
+      .container-information.mt-4
+        .magic
+          %span Michelada
+          %span Content
+          %span Match
+        %p.mb-5
+          = t("information.landing.about")
+        %h3= t("information.landing.let_the")
+        %h3.color2= t("information.landing.best_player")
+        %h3= t("information.landing.win")
+        .mt-5.mb-5
+          = link_to t("user.log_up"), new_user_registration_path,  class: 'button'
+          = link_to t("user.log_in"), new_user_session_path,  class: 'login'

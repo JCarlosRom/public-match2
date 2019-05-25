@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MCM michelada
+    = favicon_link_tag 'michelada-logo.png'
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}/
+  %body
+    = render 'shared/flash_notification'
+    = render 'welcome/header'
+    .application-content
+      .container
+        = yield
+  = render partial: 'welcome/footer'
